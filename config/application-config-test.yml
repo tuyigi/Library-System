@@ -1,0 +1,3 @@
+book_status: ['PENDING','UNPUBLISHED','PUBLISHED']
+stock_status: ['ACTIVE']
+stock_type: ['STOCK_IN','STOCK_OUT','REVERSED']
