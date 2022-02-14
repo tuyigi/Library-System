@@ -38,6 +38,7 @@ class BooksController < ApplicationController
 
     #PUT /book
     def update_book
+        
         begin
             if @book
                 @book.update(title: params[:title],author: params[:author],price: params[:price],status: params[:status],release_year: params[:release_year])
