@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+
+    before_action :authorize_request
+
+
     # GET /users
     def getAll
         @users=User.all
@@ -29,8 +33,6 @@ class UsersController < ApplicationController
         rescue StandardError => e
             render json: {message: e.message},status: 500
         end 
-
-
     end 
 
     private 

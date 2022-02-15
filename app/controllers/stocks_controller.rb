@@ -1,6 +1,6 @@
 class StocksController < ApplicationController
     before_action :getInfo , only:[:stockMovement]
-
+    before_action :authorize_request
 
     # POST /stockmovement
     def stockMovement

@@ -1,3 +1,7 @@
 book_status: ['PENDING','UNPUBLISHED','PUBLISHED']
 stock_status: ['ACTIVE']
 stock_type: ['STOCK_IN','STOCK_OUT','REVERSED']
+toke_duration: 24
+user_status: [ACTIVE,INACTIVE,BLOCKED]
+secrety_key: "centrika_test_gilbert_2022"
+

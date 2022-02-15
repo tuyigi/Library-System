@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
     before_action :get_book,only:[:showBook,:update_book]
+    before_action :authorize_request
     # GET /books
     def getAllBook
         books=Book.all
@@ -38,7 +39,7 @@ class BooksController < ApplicationController
 
     #PUT /book
     def update_book
-        
+
         begin
             if @book
                 @book.update(title: params[:title],author: params[:author],price: params[:price],status: params[:status],release_year: params[:release_year])

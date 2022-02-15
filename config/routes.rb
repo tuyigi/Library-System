@@ -17,4 +17,8 @@ Rails.application.routes.draw do
   resources :stocks
   match 'library/api/v1/stockmovement' => 'stocks#stockMovement', :via => :post
   match 'library/api/v1/movementhistory' => 'stocks#movementHistory', :via => :get
+
+  resources :authentication
+  match 'authentication/login' => 'authentication#login' , :via => :post
+  
 end
