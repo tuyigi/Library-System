@@ -1,6 +1,8 @@
 class BooksController < ApplicationController
-    before_action :get_book,only:[:showBook,:update_book]
     before_action :authorize_request
+    
+    before_action :get_book,only:[:showBook,:update_book]
+    
     # GET /books
     def getAllBook
         books=Book.all

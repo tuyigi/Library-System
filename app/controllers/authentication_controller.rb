@@ -11,7 +11,7 @@ class AuthenticationController < ApplicationController
                 return
             end 
     
-            @user=User.find_by_email(params['email'])
+            @user=User.find_by_email_and_status(params['email'],APP_CONFIG['user_status'][0])
     
             if @user.nil?
                 render json: {message: "Invalid cedentials"},status: 404
